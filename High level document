@@ -1,0 +1,85 @@
+HIGH LEVEL DESIGN DOCUMENT
+PROJECT – RANDOM JOKE GENERATOR
+NAME – GEETANSH SUNDLI
+COLLEGE – IIITDM KANCHEEPURAM
+
+What is High Level Design?
+The purpose of this High-Level Design (HLD) Document is to add the necessary detail to the current project description to represent a suitable model for coding. This document is also intended to help detect contradictions prior to coding, and can be used as a reference manual for how the modules interact at a high level
+
+The HLD will:
+•	Present all of the design aspects and define them in detail
+•	Describe the user interface being implemented
+•	Describe the hardware and software interfaces
+•	Describe the performance requirements
+•	Include design features and the architecture of the project
+
+ Scope
+The HLD documentation presents the structure of the system, such as the database architecture, application architecture (layers), application flow (Navigation), and technology architecture. The HLD uses non-technical to mildly-technical terms which should be understandable to the administrators of the system
+
+What’s the project
+Random Joke Generator is simple project, it will show you random jokes on clicking the New Joke button
+
+TOOLS USED:
+REACT JS
+ 
+
+React is a free and open-source front-end JavaScript library for building user interfaces based on components. It is maintained by Meta and a community of individual developers and companies. React can be used to develop single-page, mobile, or server-rendered applications with frameworks like Next.js.
+
+
+
+Components:
+App Component
+
+Responsible for the overall structure and layout of the application.
+Renders the Random_Joke_Generator component.
+Random_Joke_Generator Component
+
+Fetches and displays random jokes.
+Manages the state of the current joke.
+Renders the current joke and a button to fetch a new joke.
+API Service:
+fetch_us_Joke()
+Makes an HTTP GET request to the joke API.
+Retrieves a random joke from the API.
+Returns the joke data to the Random_Joke_Generator component.
+Random_Joke_Generator Component:
+State:
+
+joke: Stores the current joke fetched from the API.
+Lifecycle:
+
+On component mount, calls fetch_us_Joke() to retrieve an initial random joke and set the state.
+Methods:
+
+fetch_us_Joke(): Calls the API service to fetch a random joke and updates the state with the new joke.
+Render:
+
+Displays the current joke.
+Renders a button labeled "New Joke" that triggers fetch_us_Joke() when clicked.
+Error Handling:
+Error State:
+
+Includes a error state variable in the Random_Joke_Generator component to track any errors during the API request.
+API Request Error Handling:
+
+In the fetch_us_Joke() method, catches any errors that occur during the API request.
+Sets the error state variable with the appropriate error message.
+Displaying Error Messages:
+
+Checks the error state variable and conditionally renders an error message if an error has occurred.
+Styling:
+Uses CSS or a CSS-in-JS library (e.g., styled-components, Emotion) to style the components and create an appealing user interface.
+Testing:
+Unit tests can be written for the components using testing libraries like Jest and React Testing Library.
+Test cases should cover component rendering, state updates, API service integration, and error handling.
+Deployment:
+The application can be deployed to a web server or a hosting platform such as Netlify, Vercel, or AWS Amplify.
+Continuous integration and deployment pipelines can be set up for automated deployments
+
+CONCLUSION
+In this version, we're using the Official Joke API to fetch random jokes. The fetch_us_Joke function makes a GET request to the API and retrieves a random joke. The joke's setup and punchline properties are combined and stored in the component's state using the setJoke function.
+
+The Give_us_New_Joke function is called when the "New Joke" button is clicked, triggering the fetch_us_Joke function to fetch a new joke and update the state.
+
+The component returns JSX markup that displays the joke, along with a button to fetch a new joke.
+
