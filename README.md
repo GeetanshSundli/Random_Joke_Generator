@@ -17,7 +17,7 @@ const Random_Joke_Generator = () => {
   };
 
   const Give_us_New_Joke = () => {
-    fetchJoke();
+    fetch_us_Joke();
   };
 
   return (
